@@ -37,8 +37,10 @@ def remove(instance):
 
 
 def file_metadata(instance, position):
-    if position.is_empty():
-        return None
-    return instance[position]
-    """search"""
-# deve exibir mensagem correta via stdout
+    try:
+        print(instance.search(position))
+    except Exception:
+        print('Posição inválida', file=sys.stderr)
+
+# busca o dicionario pelo índice e retorna
+# ou exibe mensagem de exceção via stdout
