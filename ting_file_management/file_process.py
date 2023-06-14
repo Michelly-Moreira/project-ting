@@ -24,11 +24,14 @@ def process(path_file, instance: Queue):
 
 
 def remove(instance):
-    if not instance.is_empty():
-        return instance.queue.pop(0)
-    return None
-    """dequeue"""
-# remove um dicionario que foi inserido na fila
+    if len(instance) != 0:
+        clear = instance.dequeue()
+        print(f"Arquivo {clear['nome_do_arquivo']} removido com sucesso", file=sys.stdout)
+    else:
+        print(f"Não há elementos", file=sys.stdout)
+        return None
+    
+# remove um dicionario da fila
 # deve exibir mensagem correta via stdout
 
 
