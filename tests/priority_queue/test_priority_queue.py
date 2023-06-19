@@ -1,5 +1,7 @@
-# from ting_file_management.priority_queue import PriorityQueue
+from ting_file_management.priority_queue import PriorityQueue
+import pytest
 
 
 def test_basic_priority_queueing():
-    """Aqui irá sua implementação"""
+    with pytest.raises(TypeError):
+        PriorityQueue()
