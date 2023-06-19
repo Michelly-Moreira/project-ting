@@ -19,7 +19,6 @@ def test_basic_priority_queueing():
     delete = priority_queue.high_priority.dequeue()
     assert len(priority_queue) == 6
     assert delete == {"qtd_linhas": 4}
-    
 
     delete = priority_queue.dequeue()
     assert len(priority_queue) == 5
