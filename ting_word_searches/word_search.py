@@ -22,7 +22,7 @@ def exists_word(word, instance):
 
 
 def search_by_word(word, instance):
-    result= []
+    result = []
     counter = 0
 
     for element in range(len(instance)):
